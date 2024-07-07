@@ -32,16 +32,6 @@ public class TouchController {
         AdbUtils.executeCommandIteration("keyevent", iteration, sleepTime, 66);
     }
 
-    // turn screen on/off
-    public static void onOff(double sleepTime) throws IOException, InterruptedException {
-        AdbUtils.executeCommand("keyevent", sleepTime, 26);
-    }
-
-    // turn screen on/off with iteration
-    public static void onOff(double sleepTime, int iteration) throws IOException, InterruptedException {
-        AdbUtils.executeCommandIteration("keyevent", iteration, sleepTime, 26);
-    }
-
     // write method
     public static void write(String text, double sleepTime) throws IOException, InterruptedException {
         AdbUtils.executeCommand("text", sleepTime, text);

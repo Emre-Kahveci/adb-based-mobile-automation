@@ -4,7 +4,7 @@
 import java.io.IOException;
 
 public class ExamplesAoemClickHelp {
-    public static void ClickHelp(int iteration) throws InterruptedException{
+    public static void clickHelp(int iteration) throws InterruptedException{
         try {
 			TouchController.click(1840, 950, 3, iteration);
         } catch (IOException e) {

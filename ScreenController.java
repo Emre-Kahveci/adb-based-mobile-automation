@@ -55,4 +55,14 @@ public class ScreenController {
     public static void brightnessDown(double sleepTime, int iteration) throws IOException, InterruptedException {
         AdbUtils.executeCommandIteration("keyevent", iteration, sleepTime, 220);
     }
+
+    // turn screen on/off
+    public static void onOff(double sleepTime) throws IOException, InterruptedException {
+        AdbUtils.executeCommand("keyevent", sleepTime, 26);
+    }
+
+    // turn screen on/off with iteration
+    public static void onOff(double sleepTime, int iteration) throws IOException, InterruptedException {
+        AdbUtils.executeCommandIteration("keyevent", iteration, sleepTime, 26);
+    }
 }
