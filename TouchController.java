@@ -64,11 +64,11 @@ public class TouchController {
 
     // swipe x, y to x2 y2
     public static void swipe(int x, int y, int x2, int y2, double interval, double sleepTime) throws IOException, InterruptedException {
-        AdbUtils.executeCommand("swipe", sleepTime, x, y, x2, y2, (int) interval);
+        AdbUtils.executeCommand("swipe", sleepTime, x, y, x2, y2, (int) interval*1000);
     }
 
     // swipe x, y to x2 y2 with iteration
     public static void swipe(int x, int y, int x2, int y2, double interval, double sleepTime, int iteration) throws IOException, InterruptedException {
-        AdbUtils.executeCommandIteration("swipe", iteration, sleepTime, x, y, x2, y2, (int) interval);
+        AdbUtils.executeCommandIteration("swipe", iteration, sleepTime, x, y, x2, y2, (int) interval*1000);
     }
 }
